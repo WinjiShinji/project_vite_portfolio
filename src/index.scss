@@ -1,0 +1,86 @@
+:root {
+  color-scheme: light dark;
+
+  // Light Theme
+  --lightText: #0a090b;
+  --lightBackground: #e4e3e8;
+  --lightPrimary: #3f3843;
+  --lightSecondary: #dad3d8;
+  --lightAccent: #0b090b;
+
+  // Dark Theme
+  --darkText: #f5f4f6;
+  --darkBackground: #18171c;
+  --darkPrimary: #c3bcc7;
+  --darkSecondary: #2c252a;
+  --darkAccent: #f6f4f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+// Mixins
+@mixin flex($dir, $justify, $align) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+body {
+  // font-weight: 400; // Font fix
+  text-wrap: balance; // Default Text Center
+  letter-spacing: 0.05rem; // Default Letter Spacing
+  min-height: 100svh;
+  color: light-dark(var(--lightText), var(--darkText));
+  background-color: light-dark(var(--lightBackground), var(--darkBackground));
+}
+
+.nav_container {
+  @include flex(row, center, center);
+  width: 100%;
+  background-color: light-dark(var(--lightPrimary), var(--darkPrimary));
+
+  .nav-items {
+    @include flex(column, center, center);
+    list-style-type: none;
+    width: 100%;
+
+    .nav-item {
+      @include flex(row, center, center);
+      width: 100%;
+      a {
+        flex-grow: 1;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 0.5em 1.2em;
+        color: light-dark(var(--lightSecondary), var(--darkSecondary));
+        transition: all 400ms ease;
+      }
+      a:hover,
+      a:active {
+        background-color: light-dark(
+          var(--lightSecondary),
+          var(--darkSecondary)
+        );
+        color: light-dark(var(--lightPrimary), var(--darkPrimary));
+      }
+    }
+  }
+  @media screen and (min-width: 768px) {
+    @include flex(row, flex-end, center);
+    .nav-items {
+      @include flex(row, center, center);
+      width: auto;
+
+      a {
+        padding: 1em 1.2em;
+      }
+    }
+  }
+}
