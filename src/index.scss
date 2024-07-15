@@ -23,7 +23,7 @@
   line-height: 1.5;
 }
 
-// Mixins
+// ==== Mixins ==== /
 @mixin flex($dir, $justify, $align) {
   display: flex;
   flex-direction: $dir;
@@ -40,6 +40,7 @@ body {
   background-color: light-dark(var(--lightBackground), var(--darkBackground));
 }
 
+// ==== NavBar ==== //
 .nav_container {
   @include flex(row, center, center);
   width: 100%;
@@ -68,10 +69,20 @@ body {
           var(--lightSecondary),
           var(--darkSecondary)
         );
+        color: light-dark(var(--lightAccent), var(--darkAccent));
+      }
+    }
+    .nav-item.active {
+      a {
+        background-color: light-dark(
+          var(--lightSecondary),
+          var(--darkSecondary)
+        );
         color: light-dark(var(--lightPrimary), var(--darkPrimary));
       }
     }
   }
+
   @media screen and (min-width: 768px) {
     @include flex(row, flex-end, center);
     .nav-items {
@@ -84,3 +95,5 @@ body {
     }
   }
 }
+
+// ==== Home Page ==== //
