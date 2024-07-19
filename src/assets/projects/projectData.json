@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "name": "My First Webpage",
+      "projectName": "project_basicWebpage",
+      "url": "https://spectacular-mermaid-6edde0.netlify.app/",
+      "git": "https://github.com/WinjiShinji/project_basicWebpage",
+      "img": "https://www.dropbox.com/scl/fo/dejf1w7p0fufs2c2mmgoj/AFxFqqeVonivGzlBJ8fY9Bc?rlkey=jtxa7c0pfopprcjx5qdexc6mi&st=2agtcync&dl=0",
+      "description": "My first webpage I ever built. I used vanilla HTML, CSS & Javascript. My goal was to build a blocky themed webpage with a toggle for light/dark mode, and an picture carousel and embedded google map."
+    },
+    {
+      "name": "My Second Webpage",
+      "projectName": "project_estateAgencyClone",
+      "url": "https://cerulean-dolphin-1a4c99.netlify.app/",
+      "git": "https://github.com/WinjiShinji/project_estateAgencyClone",
+      "img": "https://www.dropbox.com/scl/fo/dwh8007b30rdd8nhy2lps/ALS9M8s_yXjB8i_RsDKxD1I?rlkey=e4fdeyfpet9dv0i8bvwq7cpvb&st=060aiua9&dl=0",
+      "description": "My second webpage, based on an Estate Agency's site (front-end). I used vanilla HTML, CSS & Javascript. My goal was to recreate the front main page design as close as possible to the original design. Responsiveness is poor and layout is inconsistent."
+    }
+  ]
+}

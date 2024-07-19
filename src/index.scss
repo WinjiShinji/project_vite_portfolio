@@ -1,99 +1,129 @@
-:root {
-  color-scheme: light dark;
-
-  // Light Theme
-  --lightText: #0a090b;
-  --lightBackground: #e4e3e8;
-  --lightPrimary: #3f3843;
-  --lightSecondary: #dad3d8;
-  --lightAccent: #0b090b;
-
-  // Dark Theme
-  --darkText: #f5f4f6;
-  --darkBackground: #18171c;
-  --darkPrimary: #c3bcc7;
-  --darkSecondary: #2c252a;
-  --darkAccent: #f6f4f6;
-}
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
 }
 
-// ==== Mixins ==== /
-@mixin flex($dir, $justify, $align) {
+html {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+// ==== Themes ==== //
+main[data-theme="light"] {
+  --text: #000000;
+  --background: #e0e3f3;
+  --primary: #75859f;
+  --secondary: #6b8aa8;
+  --accent: #9ab5df;
+}
+main[data-theme="dark"] {
+  --text: #e0e3f3;
+  --background: #283058;
+  --primary: #60708a;
+  --secondary: #577594;
+  --accent: #203a65;
+}
+main {
+  min-height: 100svh;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+// ==== Mixins ==== //
+@mixin flex($direction, $justify, $align) {
   display: flex;
-  flex-direction: $dir;
+  flex-direction: $direction;
   justify-content: $justify;
   align-items: $align;
 }
 
-body {
-  // font-weight: 400; // Font fix
-  text-wrap: balance; // Default Text Center
-  letter-spacing: 0.05rem; // Default Letter Spacing
-  min-height: 100svh;
-  color: light-dark(var(--lightText), var(--darkText));
-  background-color: light-dark(var(--lightBackground), var(--darkBackground));
-}
-
-// ==== NavBar ==== //
+// ==== Navbar ==== //
 .nav_container {
-  @include flex(row, center, center);
-  width: 100%;
-  background-color: light-dark(var(--lightPrimary), var(--darkPrimary));
+  @include flex(column, center, center);
+  color: var(--text);
+  background-color: var(--secondary);
+
+  .nav-btn {
+    @include flex(row, center, center);
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    color: var(--text);
+    background-color: var(--primary);
+  }
+  .nav-btn:disabled {
+    display: none;
+  }
 
   .nav-items {
     @include flex(column, center, center);
-    list-style-type: none;
     width: 100%;
-
+    list-style-type: none;
     .nav-item {
       @include flex(row, center, center);
+      text-align: center;
       width: 100%;
       a {
         flex-grow: 1;
-        text-align: center;
+        color: var(--text);
         text-decoration: none;
-        font-size: 1.2rem;
-        padding: 0.5em 1.2em;
-        color: light-dark(var(--lightSecondary), var(--darkSecondary));
-        transition: all 400ms ease;
       }
-      a:hover,
-      a:active {
-        background-color: light-dark(
-          var(--lightSecondary),
-          var(--darkSecondary)
-        );
-        color: light-dark(var(--lightAccent), var(--darkAccent));
+    }
+    .nav-item:hover {
+      a {
+        color: var(--background);
+        background-color: var(--text);
+        filter: opacity(50%);
       }
     }
     .nav-item.active {
       a {
-        background-color: light-dark(
-          var(--lightSecondary),
-          var(--darkSecondary)
-        );
-        color: light-dark(var(--lightPrimary), var(--darkPrimary));
+        color: var(--background);
+        background-color: var(--text);
+        filter: opacity(100%);
       }
     }
   }
 
-  @media screen and (min-width: 768px) {
-    @include flex(row, flex-end, center);
-    .nav-items {
-      @include flex(row, center, center);
-      width: auto;
+  .theme-btn {
+    background: none;
+    border: none;
+    margin: 0.5rem 0.75rem;
+    color: var(--text);
+    transform: scale(1.2);
+  }
+  .theme-btn:hover {
+    color: var(--background);
+    cursor: pointer;
+  }
 
-      a {
-        padding: 1em 1.2em;
-      }
-    }
+  // Show-Hide Menu
+  .nav-items.show-nav {
+    display: flex;
+  }
+  .nav-items.hide-nav {
+    display: none;
   }
 }
-
-// ==== Home Page ==== //
