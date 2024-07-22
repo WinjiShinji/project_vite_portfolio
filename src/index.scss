@@ -127,3 +127,81 @@ main {
     display: none;
   }
 }
+
+// ==== Portfolio ==== //
+.portfolio_container {
+  .title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  .projects_container {
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .links {
+      @include flex(row, center, center);
+      gap: 1rem;
+      margin-bottom: 1rem;
+      a {
+        color: var(--text);
+        background-color: var(--primary);
+        border: 2px solid var(--text);
+        border-radius: 8px;
+
+        padding: 0 0.5em;
+        text-decoration: none;
+        text-align: center;
+      }
+      a:first-child {
+        background-color: chocolate;
+      }
+      a:nth-child(2) {
+        background-color: cadetblue;
+      }
+      a:last-child {
+        background-color: darkslateblue;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .links {
+        justify-content: flex-start;
+      }
+    }
+
+    .project {
+      background-color: var(--primary);
+      padding: 1rem;
+      border-bottom: 2px ridge var(--secondary);
+
+      .img_container {
+        @include flex(row, flex-start, flex-start);
+        overflow-x: auto;
+        img {
+          width: auto;
+          margin: 0 0.5em;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .img_container.hide {
+        display: none;
+      }
+
+      button {
+        margin: 1rem 0;
+        padding: 0.5em;
+        border: 1px solid var(--text);
+        border-radius: 8px;
+        color: var(--text);
+        background-color: var(--accent);
+      }
+    }
+  }
+}

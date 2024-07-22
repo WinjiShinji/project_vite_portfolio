@@ -2,6 +2,7 @@
   "projects": [
     {
       "name": "My First Webpage",
+      "date": "Sep 2022",
       "projectName": "project_basicWebpage",
       "url": "https://spectacular-mermaid-6edde0.netlify.app/",
       "git": "https://github.com/WinjiShinji/project_basicWebpage",
@@ -10,11 +11,30 @@
     },
     {
       "name": "My Second Webpage",
+      "date": "Nov 2022",
       "projectName": "project_estateAgencyClone",
       "url": "https://cerulean-dolphin-1a4c99.netlify.app/",
       "git": "https://github.com/WinjiShinji/project_estateAgencyClone",
       "img": "https://www.dropbox.com/scl/fo/dwh8007b30rdd8nhy2lps/ALS9M8s_yXjB8i_RsDKxD1I?rlkey=e4fdeyfpet9dv0i8bvwq7cpvb&st=060aiua9&dl=0",
       "description": "My second webpage, based on an Estate Agency's site (front-end). I used vanilla HTML, CSS & Javascript. My goal was to recreate the front main page design as close as possible to the original design. Responsiveness is poor and layout is inconsistent."
+    },
+    {
+      "name": "Form Validation",
+      "date": "March 2023",
+      "projectName": "project_validation_form",
+      "url": "https://sage-sunshine-f96307.netlify.app/",
+      "git": "https://github.com/WinjiShinji/project_validation-form",
+      "img": "https://www.dropbox.com/scl/fo/mr7vesk4vjq56zijiorig/AId5-g7F_i2is1hjutgMJck?rlkey=nqsbl7ssjw2lkjfn9p7ciwqr9&st=739y4jxw&dl=0",
+      "description": "Form with validation (front-end). I used React with its useState, useRef hooks & Regular Expression to validate the entry of form data."
+    },
+    {
+      "name": "Fullstack Portal",
+      "date": "Nov 2023",
+      "projectName": "project_MERN_portal",
+      "url": "https://fantastic-heliotrope-6f3230.netlify.app/",
+      "git": "https://github.com/WinjiShinji/project_MERN_portal_frontend",
+      "img": "https://www.dropbox.com/scl/fo/5qhl1egrbizdfqwmodev3/AJgLP9UDekgs7QDk-FO77Do?rlkey=kmkm8aiml1sgeza8wfkmhx67t&st=ybnfxxeo&dl=0",
+      "description": "The objective of this project is to build a FullStack web-portal. This web-portal will be able to handle multiple users login Events with secure authentication and authorization, achieved through the use of bcrypt and JWT. Data will be managed through the use of the MVC principles, using Mongoose & MongoDB for the data handling aspect of the project. React will be used for the Front-End, with axios handling endpoint requests."
     }
   ]
 }
