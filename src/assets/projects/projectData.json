@@ -36,5 +36,52 @@
       "img": "https://www.dropbox.com/scl/fo/5qhl1egrbizdfqwmodev3/AJgLP9UDekgs7QDk-FO77Do?rlkey=kmkm8aiml1sgeza8wfkmhx67t&st=ybnfxxeo&dl=0",
       "description": "The objective of this project is to build a FullStack web-portal. This web-portal will be able to handle multiple users login Events with secure authentication and authorization, achieved through the use of bcrypt and JWT. Data will be managed through the use of the MVC principles, using Mongoose & MongoDB for the data handling aspect of the project. React will be used for the Front-End, with axios handling endpoint requests."
     }
+  ],
+  "challenges": [
+    {
+      "name": "Sunny Side Agency - WIP",
+      "date": "Jun 2023",
+      "projectName": "challenge_sunnysideagency",
+      "url": "https://mellifluous-gelato-4dbe76.netlify.app/",
+      "git": "https://github.com/WinjiShinji/challenge_sunnysideagency",
+      "img": "https://www.dropbox.com/scl/fo/ylxvcgsg6fbd1mme1fqbb/AGkqUtllVXcIdB3ACzSmf_s?rlkey=vfqws2atmni08u98trfvn4jhk&st=v7p9emz8&dl=0",
+      "description": "This challenge was to build a front-end landing page based on the provided design, matching the build as close as possible to the provided design & be responsive to different screen sizes. Vanilla React was used with no extra dependencies."
+    },
+    {
+      "name": "Rock, Paper, Scissors - WIP",
+      "date": "Aug 2023",
+      "projectName": "challenge_rockpaperscissors",
+      "url": "https://sparkly-torte-3c3ffa.netlify.app/",
+      "git": "https://github.com/WinjiShinji/challenge_rockpaperscissors",
+      "img": "",
+      "description": "This challenge is to build out a Rock, Paper, Scissors game and get it looking as close to the original design as possible. Vanilla React was used for this challenge."
+    },
+    {
+      "name": "Space Tourism",
+      "date": "Oct 2023",
+      "projectName": "challenge_spacetourism",
+      "url": "https://celadon-biscotti-4c820c.netlify.app/",
+      "git": "https://github.com/WinjiShinji/challenge_spacetourism",
+      "img": "https://www.dropbox.com/scl/fo/x9wtoulxpr3rbdvmhlct3/AN1ncCJOgYiJmI2H150q6_8?rlkey=nqhcz83uam22gfy1pjqi96xyu&st=ts04blaq&dl=0",
+      "description": "This challenge is to build out a multi-page space tourism website and get it looking as close to the design as possible. I used React with useContext & useReducer to pass data from an internal JSON file to components. Components were styled with SASS, a CSS extension language."
+    },
+    {
+      "name": "",
+      "date": "",
+      "projectName": "",
+      "url": "",
+      "git": "",
+      "img": "",
+      "description": ""
+    },
+    {
+      "name": "",
+      "date": "",
+      "projectName": "",
+      "url": "",
+      "git": "",
+      "img": "",
+      "description": ""
+    }
   ]
 }

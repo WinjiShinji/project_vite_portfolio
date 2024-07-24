@@ -1,12 +1,24 @@
 import { Link } from "react-router-dom"
-import { assetImgList } from "../assets/projects/assetImgList"
-import { projects } from "../assets/projects/projectData.json"
 
 type ImgList = {
   [key: string]: string[]
 }
+type Props = {
+  img: ImgList
+  data: {
+    name: string
+    date: string
+    projectName: string
+    url: string
+    git: string
+    img: string
+    description: string
+  }[]
+}
 
-export default function Projects() {
+export default function Projects({ img, data }: Props) {
+  const imgList: ImgList = img
+
   // Events //
   const handleImgShow = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -21,10 +33,9 @@ export default function Projects() {
     }
   }
 
-  const imgList: ImgList = assetImgList
   return (
     <div className="projects_container">
-      {[...projects].reverse().map((item) => (
+      {[...data].reverse().map((item) => (
         <div className="project" key={item.name}>
           <h2>{item.name}</h2>
           <h3>{item.projectName}</h3>

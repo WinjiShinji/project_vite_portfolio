@@ -183,10 +183,10 @@ main {
         @include flex(row, flex-start, flex-start);
         overflow-x: auto;
         img {
-          width: auto;
-          margin: 0 0.5em;
-          object-fit: cover;
-          object-position: center;
+          max-height: 200px;
+          max-width: 400px;
+          object-fit: contain;
+          background-color: var(--secondary);
         }
       }
 
